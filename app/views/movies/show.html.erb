@@ -3,7 +3,7 @@
 <small>- <%= @movie.director %></small>
 <p> <%= @movie.runtime_in_minutes %> minutes</p>
 <p> <%= @movie.description %> <p>
-<p> <%= @movie.poster_image_url %> <p>
+<p> <%= image_tag @movie.poster.url(:thumb) %> </p>
 <p> <%= formatted_date(@movie.release_date) %> <p>
 
 <h3>Reviews of <em><%= @movie.title %></em></h3>
