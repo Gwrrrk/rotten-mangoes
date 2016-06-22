@@ -5,12 +5,14 @@
 		<tr>
 			<td> <b>User Email </b> </td>
 			<td> <b>User Full Name </b> </td>
+			<td> </td>
 		</tr>
 	</thead>
 	<% @users.each do |user|%>
 	<tr>
-		<td>	<%= user.email %> </td>
-		<td>  <%= user.full_name %> </td>
+		<td> <%= user.email %> </td>
+		<td> <%= user.full_name %> </td>
+		<td> <%= button_to "delete", admin_user_path(user), method: :delete %> </td>
 	</tr>
 
 <% end %>
